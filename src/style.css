@@ -1,0 +1,163 @@
+/* =====================================
+   Estilos globales en :root
+======================================== */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Tipografía principal */
+  line-height: 1.5;
+  /* Altura de línea para mejorar la legibilidad */
+  font-weight: 400;
+  /* Peso de la fuente por defecto */
+  color-scheme: light dark;
+  /* Soporte para esquemas de color claro y oscuro */
+  color: rgba(255, 255, 255, 0.87);
+  /* Color del texto */
+  background-color: #242424;
+  /* Color de fondo de la página */
+  font-synthesis: none;
+  /* Deshabilitar la síntesis de fuentes */
+  text-rendering: optimizeLegibility;
+  /* Arreglar la legibilidad en las páginas */
+  -webkit-font-smoothing: antialiased;
+  /* Suavizar las fuentes en WebKit */
+  -moz-osx-font-smoothing: grayscale;
+  /* Suavizar las fuentes en macOS */
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 480px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+}
+
+/* =====================================
+   Estilos para enlaces
+======================================== */
+a {
+  font-weight: 500;
+  /* Peso de fuente para enlaces */
+  color: #646cff;
+  /* Color del texto para enlaces */
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+  /* Cambiar color al pasar el mouse */
+}
+
+/* =====================================
+   Estilos del cuerpo (Flexbox)
+======================================== */
+body {
+  margin: 0;
+  /* Quitar márgenes predeterminados del navegador */
+  display: flex;
+  /* Flexbox para el cuerpo requerido */
+  flex-direction: column;
+  /* Formateo de elementos de página en una columna */
+  align-items: center;
+  /* Centrar elementos de manera horizontal */
+  min-width: 320px;
+  min-height: 100vh;
+  /* Altura mínima para que ocupe toda la ventana */
+}
+
+/************** Estilos de encabezado ********************/
+h1 {
+  font-size: 3.2em;
+  /* Tamaño de fuente del encabezado */
+  line-height: 1.1;
+  /* Ajustando la altura de línea para el encabezado */
+}
+
+#app {
+  max-width: 1280px;
+  /* El ancho máximo para el contenedor */
+  margin: 0 auto;
+  /* Centrar el contenedor horizontalmente */
+  padding: 2rem;
+  /* Espaciado alrededor del contenido */
+  text-align: center;
+  /* Centrar texto en el contenedor */
+}
+
+/* =====================================
+   Construcción del contenedor de botones (Flexbox)
+======================================== */
+.button-container {
+  display: flex;
+  /* Flexbox en contenedor de botones habilitado */
+  flex-wrap: wrap;
+  /* Permitir que los botones se agrupen en varias líneas */
+  justify-content: center;
+  /* Centrar los botones horizontalmente */
+  gap: 1rem;
+  /* Espacio entre botones */
+  margin-top: 1rem;
+  /* Espacio superior */
+}
+
+.button-container button {
+  flex: 1 1 200px;
+  /* Establecer el ancho de cada botón a por lo menos 200px */
+  padding: 1em;
+  /* Espaciado interno del botón */
+  border-radius: 8px;
+  /* Bordes redondeados para botones */
+  border: none;
+  /* Sin borde */
+  background-color: #646cff;
+  /* Color de fondo de los botones */
+  color: white;
+  /* Color del texto de los botones */
+  font-size: 1em;
+  /* Tamaño de la fuente de los botones */
+  cursor: pointer;
+  /* Permite manejar eventos del ratón */
+  transition: background-color 300ms, transform 300ms;
+  /* Transiciones suaves de color y transformación */
+}
+
+/* Efecto de flotación en los botones */
+.button-container button:hover {
+  background-color: #535bf2;
+  /* Cambiar el color de fondo al pasar el mouse */
+  transform: translateY(-2px);
+  /* Efecto de elevación al pasar el ratón */
+}
+
+/* =====================================
+   Estilos para CSS Grid
+======================================== */
+.grid-container {
+  display: grid;
+  /* Activar CSS Grid para el contenedor */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* Crear columnas responsivas */
+  gap: 1.5rem;
+  /* Espacio entre los elementos de la cuadrícula */
+  margin: 2rem;
+}
+
+/* Estilo del elemento de puntuación */
+#puntuacion {
+  grid-column: span 2;
+  /* especificar que el elemento de puntuación debe ocupar dos columnas en la cuadrícula */
+  text-align: center;
+  /* Centrar el texto */
+  font-size: 1.5em;
+  /* Tamaño de fuente más grande */
+}
+
+/* CSS para la imagen de la tarjeta */
+#imagenCarta {
+  max-width: 100%;
+  /* Asegurarse de que la imagen no se haga más grande que el ancho del contenedor. */
+  height: auto;
+  /* Mantener la imagen en proporción de aspecto */
+  grid-column: span 2;
+  /* la imagen debe ocupar dos columnas en la cuadrícula */
+}
